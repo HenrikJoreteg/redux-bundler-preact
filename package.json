@@ -1,7 +1,7 @@
 {
   "name": "redux-bundler-preact",
   "description": "Bindings for redux-bundler to Preact",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Henrik Joreteg <henrik@joreteg.com> (joreteg.com)",
   "devDependencies": {
     "microbundle": "0.4.0",
