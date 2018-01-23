@@ -1,0 +1,35 @@
+{
+  "name": "redux-bundler-preact",
+  "description": "Bindings for redux-bundler to Preact",
+  "version": "0.0.0",
+  "author": "Henrik Joreteg <henrik@joreteg.com> (joreteg.com)",
+  "devDependencies": {
+    "microbundle": "0.4.0",
+    "preact": "8.2.7",
+    "preact-render-to-string": "3.7.0",
+    "redux-bundler": "16.0.0",
+    "tap-spec": "4.1.1",
+    "tape": "4.8.0"
+  },
+  "keywords": [
+    "preact",
+    "redux"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "module": "index.m.js",
+  "peerDependencies": {
+    "preact": "*",
+    "redux-bundler": "*"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "tape test/*.js | tap-spec"
+  },
+  "source": "src/index.js"
+}
