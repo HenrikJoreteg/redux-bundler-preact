@@ -20,8 +20,7 @@
   "main": "index.js",
   "module": "index.m.js",
   "peerDependencies": {
-    "preact": "*",
-    "redux-bundler": "*"
+    "preact": "*"
   },
   "prettier": {
     "semi": false,
