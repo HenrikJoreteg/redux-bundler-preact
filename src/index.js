@@ -1,10 +1,18 @@
-import { Component, h } from 'preact'
+import { Component, createContext, h } from 'preact'
 
-export const Provider = function () {}
-Provider.prototype.getChildContext = function () {
-  return { store: this.props.store }
+export const StoreContext = createContext()
+
+export const Provider = (props) => {
+  const store = props.store
+  const rest = {}
+  Object.keys(props).forEach((key) => {
+    if (key !== 'store') {
+      rest[key] = props[key]
+    }
+  })
+
+  return h(StoreContext.Provider, Object.assign({ value: store }, rest))
 }
-Provider.prototype.render = props => props.children[0]
 
 export const connect = (...args) => {
   const Comp = args.slice(-1)[0]
@@ -23,10 +31,10 @@ export const connect = (...args) => {
     throw Error(`CanNotConnect ${str}`)
   })
 
-  return class Connect extends Component {
-    constructor (props, context) {
-      super(props, context)
-      const store = context.store
+  class Connect extends Component {
+    constructor (props) {
+      super(props)
+      const store = props.store
       this.state = store.select(keysToWatch)
       this.unsubscribe = store.subscribeToSelectors(keysToWatch, this.setState.bind(this))
       this.actionCreators = {}
@@ -48,4 +56,8 @@ export const connect = (...args) => {
       return h(Comp, Object.assign({}, props, state, this.actionCreators))
     }
   }
+
+  return (props) => h(StoreContext.Consumer, undefined, (store) => {
+    return h(Connect, Object.assign({ store: store }, props))
+  });
 }
