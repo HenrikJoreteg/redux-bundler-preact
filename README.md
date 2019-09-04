@@ -6,8 +6,16 @@ Bindings for redux-bundler to Preact
 
 ## install
 
+Install the latest for a Preact-X compatible version:
+
 ```
 npm install redux-bundler-preact
+```
+
+For legacy Preact support (v3–8), install v1:
+
+```
+npm install redux-bundler-preact@^1
 ```
 
 ## example / docs
