@@ -5,8 +5,8 @@
   "author": "Henrik Joreteg <henrik@joreteg.com> (joreteg.com)",
   "devDependencies": {
     "microbundle": "0.4.0",
-    "preact": "8.2.7",
-    "preact-render-to-string": "3.7.0",
+    "preact": "^10.0.0-rc.1",
+    "preact-render-to-string": "^5.0.6",
     "redux-bundler": "16.1.0",
     "tap-spec": "4.1.1",
     "tape": "4.8.0"
@@ -20,7 +20,7 @@
   "main": "index.js",
   "module": "index.m.js",
   "peerDependencies": {
-    "preact": "3.0.0 - 8.x.x"
+    "preact": ">=10.0.0"
   },
   "prettier": {
     "semi": false,
