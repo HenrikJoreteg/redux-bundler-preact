@@ -20,7 +20,7 @@
   "main": "index.js",
   "module": "index.m.js",
   "peerDependencies": {
-    "preact": "3.0.0 - 8.x.x"
+    "preact": ">=10.0.0"
   },
   "prettier": {
     "semi": false,
