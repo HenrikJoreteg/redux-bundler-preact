@@ -65,6 +65,14 @@ export default connect(
 
 If you like this follow [@HenrikJoreteg](http://twitter.com/henrikjoreteg) on twitter.
 
+Big thanks to [@swashcap](https://github.com/swashcap) for his contributions.
+
+## changelog
+
+- `2.0.1` - update deps for security patches
+- `2.0.0` - upgrade to preact X
+- `1.x` - preact 8 and lower
+
 ## license
 
 [MIT](http://mit.joreteg.com/)
