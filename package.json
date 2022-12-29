@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "author": "Henrik Joreteg <henrik@joreteg.com> (joreteg.com)",
   "devDependencies": {
-    "microbundle": "0.4.0",
+    "microbundle": "0.15.1",
     "preact": "^10.0.0-rc.1",
     "preact-render-to-string": "^5.0.6",
     "redux-bundler": "16.1.0",
